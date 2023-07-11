@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><img id="imagem"></div>
+    <script>
+        let imagem = document.getElementById("imagem");
+        fetch("http://localhost:3000/list").then((data=>data.json())).then(res=>{imagem.src = res[0].url})
+    </script>
+</body>
+</html>
