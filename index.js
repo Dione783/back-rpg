@@ -38,7 +38,7 @@ app.post("/",async (req,res)=>{
     res.redirect("http://localhost:5173/list");
 });
 
-app.use("/",express.static(path.join(__dirname,"public")))
+app.get("/",(req,res)=>{res.send("<h1>Hello World</h1>")})
 
 app.get("/list/vilas",async(req,res)=>{
     const vilas = await persoModel.distinct("vila");
