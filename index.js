@@ -35,7 +35,7 @@ app.post("/",async (req,res)=>{
     let url = await req.body.url;
     let perso = new persoModel({name:name,description:description,url,vila});
     await perso.save();
-    res.redirect("http://localhost:5173/list");
+    res.redirect("https://back-rpg-3olc.vercel.app/list");
 });
 
 app.get("/",(req,res)=>{res.send("<h1>Hello World</h1>")})
