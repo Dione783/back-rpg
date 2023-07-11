@@ -5,7 +5,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 
 const options  = {
-    origin:"*",
+    origin:"https://64ad95248ae12b20d95746a3--radiant-truffle-c6bba8.netlify.app",
     methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
 }
 
