@@ -5,11 +5,11 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 
 const options  = {
-    origin:"https://radiant-truffle-c6bba8.netlify.app",
+    origin:"*",
     methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
 }
 
-mongoose.connect("mongodb+srv://Dione:Dione321@clusterteste.mspd3qn.mongodb.net/rpg?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://Dione22:Dione321@cluster0.v9aekhr.mongodb.net/")
 
 const persoSchema = new mongoose.Schema({
     name:String,
@@ -35,7 +35,7 @@ app.post("/",async (req,res)=>{
     let url = await req.body.url;
     let perso = new persoModel({name:name,description:description,url,vila});
     await perso.save();
-    res.redirect("https://back-rpg-3olc.vercel.app/list");
+    res.redirect("http://localhost:5173/list");
 });
 
 app.get("/",(req,res)=>{res.send("<h1>Hello World</h1>")})
